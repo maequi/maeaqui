@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:maeaqui/screens/login_screen.dart';
+import 'package:maeaqui/screens/register_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -37,7 +39,10 @@ class WelcomeScreen extends StatelessWidget {
 
               ElevatedButton(
                 onPressed: () {
-                  print('Botão Criar Conta Pressionado!');
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const RegisterScreen()),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
                   padding: EdgeInsets.symmetric(vertical: 16),
@@ -55,7 +60,10 @@ class WelcomeScreen extends StatelessWidget {
 
               TextButton(
                 onPressed: () {
-                  print('Botão Já tenho conta Pressionado!');
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const LoginScreen()),
+                  );
                 },
                 child: const Text(
                   'Já tenho conta',
