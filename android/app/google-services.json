@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "170679545104",
+    "project_id": "maeaqui-d54b4",
+    "storage_bucket": "maeaqui-d54b4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:170679545104:android:d0d5b5673110be30b68995",
+        "android_client_info": {
+          "package_name": "com.example.maeaqui"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbqJYT7Yn-l8ZoRiWpwXGyc0xksP1iXsQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
