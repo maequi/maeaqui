@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'package:maeaqui/screens/welcome_screen.dart';
+import 'package:maeaqui/theme/theme_manager.dart';
+import 'package:maeaqui/theme/app_themes.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
@@ -15,14 +18,16 @@ class MaeAquiApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'MãeAqui',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const WelcomeScreen(),
+    return ValueListenableBuilder<bool>(
+      valueListenable: themeManager,
+      builder: (context, isBlue, child) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'MãeAqui',
+          theme: isBlue ? temaAzul : temaRosa,
+          home: const WelcomeScreen(),
+        );
+      },
     );
   }
 }
